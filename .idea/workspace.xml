@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="" />
+    <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/.env" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/core/database/database.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/core/database/database.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +73,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Alex\\AppData\\Roaming\\npm\\node_modules\\prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\www\\cashier\\server\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\www\\cashier\\cashierClient\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -107,6 +111,7 @@
       <workItem from="1673208180879" duration="9577000" />
       <workItem from="1673299681091" duration="4652000" />
       <workItem from="1673355707503" duration="1404000" />
+      <workItem from="1673548419263" duration="1570000" />
     </task>
     <task id="LOCAL-00001" summary="1v">
       <created>1668536262752</created>
@@ -157,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673548329385</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1v">
+      <created>1673548444420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673548444420</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1v">
+      <created>1673548568930</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673548568930</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
