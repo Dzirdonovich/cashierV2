@@ -32,8 +32,13 @@ export const postOrder: any = createAsyncThunk(
   async (order) => {
     const { data } = await axios.post(
         `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}:${process.env.REACT_APP_PRODUCTION_PORT || 4000}/api/v1/orders/`,
-      order
+
+      order,
+        
+
     );
+
     return data;
+
   }
 );
