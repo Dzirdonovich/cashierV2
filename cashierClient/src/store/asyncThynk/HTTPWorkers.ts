@@ -4,7 +4,7 @@ import axios from "axios";
 export const getWorkers: any = createAsyncThunk(
   "workers/getWorkers",
   async () => {
-    const { data } = await axios.get("localhost:4000/api/v1/workers");
+    const { data } = await axios.get(`${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/workers`);
     console.log(data);
     return data;
   }
