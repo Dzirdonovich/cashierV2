@@ -8,6 +8,7 @@ export const getMenu: any = createAsyncThunk("menus/getMenu", async () => {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "https://88bc-88-206-109-43.eu.ngrok.io",
+        "ngrok-skip-browser-warning": "69420",
       },
     }
   );

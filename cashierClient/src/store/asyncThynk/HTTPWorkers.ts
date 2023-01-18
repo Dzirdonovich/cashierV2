@@ -11,6 +11,7 @@ export const getWorkers: any = createAsyncThunk(
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin":
             "https://88bc-88-206-109-43.eu.ngrok.io",
+          "ngrok-skip-browser-warning": "69420",
         },
       }
     );
