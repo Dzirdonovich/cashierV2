@@ -9,6 +9,7 @@ import { IOrder } from "../models/IOrder";
 import { Link } from "react-router-dom";
 import { getWorkers } from "../store/asyncThynk/HTTPWorkers";
 import WorkerButton from "../components/WorkerButton";
+import {getMenu} from "../store/asyncThynk/HTTPMenu";
 
 function StartPage() {
   const dispatch = useAppDispatch();
@@ -30,6 +31,7 @@ function StartPage() {
     dispatch(getOrdersWithPage(1));
     dispatch(getOrders());
     dispatch(getWorkers());
+    dispatch(getMenu())
   }, [state.settings.page]);
 
   const calculateMediumPrice = (orders: IOrder[]) => {

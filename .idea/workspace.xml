@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cashierClient/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/core/database/database.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/core/database/database.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/workers/workers.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/workers/workers.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +120,9 @@
       <workItem from="1673647661377" duration="594000" />
       <workItem from="1673654223771" duration="659000" />
       <workItem from="1673723070208" duration="1435000" />
-      <workItem from="1673727951798" duration="427000" />
+      <workItem from="1673727951798" duration="1332000" />
+      <workItem from="1673997474886" duration="637000" />
+      <workItem from="1673998494211" duration="1659000" />
     </task>
     <task id="LOCAL-00001" summary="1v">
       <created>1668536262752</created>
@@ -307,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673728321915</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="1v">
+      <created>1673728388058</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673728388058</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

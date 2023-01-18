@@ -4,8 +4,9 @@ import cors from 'cors';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
+
   app.setGlobalPrefix('api/v1');
-  app.enableCors({origin: 'http://app.cashierdodonow.space/'});
-  await app.listen(4000);
+  app.enableCors();await app.listen(4000);
 }
 bootstrap();

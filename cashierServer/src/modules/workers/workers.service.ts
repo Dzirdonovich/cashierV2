@@ -36,7 +36,7 @@ export class WorkersService {
     );
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} worker`;
+  async remove(id: number) {
+    return await Worker.findOne({where: {id: id}})
   }
 }
