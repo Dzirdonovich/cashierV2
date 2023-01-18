@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPMenu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Alex\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\www\\cashier\\cashierClient\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\www\\cashier\\cashierServer\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -118,7 +120,9 @@
       <workItem from="1673723070208" duration="1435000" />
       <workItem from="1673727951798" duration="1332000" />
       <workItem from="1673997474886" duration="637000" />
-      <workItem from="1673998494211" duration="4113000" />
+      <workItem from="1673998494211" duration="5665000" />
+      <workItem from="1674004311751" duration="342000" />
+      <workItem from="1674035379505" duration="456000" />
     </task>
     <task id="LOCAL-00001" summary="1v">
       <created>1668536262752</created>
@@ -365,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674002413299</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="1v">
+      <created>1674002657686</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1674002657686</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
