@@ -27,12 +27,11 @@ function StartPage() {
   };
 
   useEffect(() => {
-    state.order.ordersWithPage.length == 0
-      ? dispatch(getOrdersWithPage(state.settings.page))
-      : "";
-    state.order.orders.length == 0 ? dispatch(getOrders()) : "";
-    state.worker.length == 0 ? dispatch(getWorkers()) : "";
-    state.menu.length == 0 ? dispatch(getMenu()) : "";
+    dispatch(getOrdersWithPage(state.settings.page));
+
+    dispatch(getOrders());
+    dispatch(getWorkers());
+    dispatch(getMenu());
   }, [state.settings.page]);
 
   const calculateMediumPrice = (orders: IOrder[]) => {
