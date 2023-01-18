@@ -4,7 +4,7 @@ export interface IOrder {
   place: number;
   price: number;
   status: string;
-  OrderItem: string;
+  OrderItem: [];
   payment: number;
   number: number;
   workerId: number;
