@@ -7,7 +7,11 @@ async function bootstrap() {
   app.enableCors();
   app.setGlobalPrefix('api/v1');
   app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
+    res.header(
+      'Access-Control-Allow-Origin',
+      'https://cashier-v2-qrsj.vercel.app',
+    );
+    res.header('content-type', 'application/json');
     res.header(
       'Access-Control-Allow-Headers',
       'Origin, X-Requested-With, Content-Type, Accept',

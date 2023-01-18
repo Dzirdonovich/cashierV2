@@ -12,7 +12,8 @@ export const getOrdersWithPage: any = createAsyncThunk(
       {
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin":
+            "https://88bc-88-206-109-43.eu.ngrok.io",
         },
       }
     );
@@ -35,7 +36,7 @@ export const getOrders: any = createAsyncThunk("orders/getOrders", async () => {
     {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://88bc-88-206-109-43.eu.ngrok.io",
       },
     }
   );
@@ -52,7 +53,8 @@ export const postOrder: any = createAsyncThunk(
       {
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin":
+            "https://88bc-88-206-109-43.eu.ngrok.io",
         },
       }
     );

@@ -9,7 +9,8 @@ export const getWorkers: any = createAsyncThunk(
       {
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin":
+            "https://88bc-88-206-109-43.eu.ngrok.io",
         },
       }
     );
