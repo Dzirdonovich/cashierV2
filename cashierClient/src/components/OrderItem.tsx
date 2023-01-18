@@ -16,7 +16,7 @@ function OrderItem({
     >
       <div className="flex justify-between flex-wrap box-border ">
         <div className=" box-border bg-blue-500 mr-2 rounded-md p-1 text-3xl text-white font-bold">
-          {number} - 1
+          {number} - {orderItem.length}
         </div>
         <div className="w-1/3 text-right">
           {createdAt.getHours()} : {createdAt.getMinutes()}

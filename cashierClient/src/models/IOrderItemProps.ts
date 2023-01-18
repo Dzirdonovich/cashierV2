@@ -5,5 +5,5 @@ export interface IOrderItemProps {
   createdAt: Date;
   status: string;
   price: number;
-  orderItem: {};
+  orderItem: [{}];
 }
