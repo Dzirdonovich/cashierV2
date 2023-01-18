@@ -9,6 +9,7 @@ export const WorkerSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getWorkers.fulfilled, (state: IWorker[], { payload }) => {
+      state.length = 0;
       state.push(...payload);
       console.log(payload);
     });
