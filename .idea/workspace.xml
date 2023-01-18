@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/core/database/database.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/core/database/database.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPMenu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPOrders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPOrders.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPWorkers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPWorkers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cashierServer/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/workers/workers.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/workers/workers.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +124,7 @@
       <workItem from="1673723070208" duration="1435000" />
       <workItem from="1673727951798" duration="1332000" />
       <workItem from="1673997474886" duration="637000" />
-      <workItem from="1673998494211" duration="1659000" />
+      <workItem from="1673998494211" duration="2879000" />
     </task>
     <task id="LOCAL-00001" summary="1v">
       <created>1668536262752</created>
@@ -320,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673728388058</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="1v">
+      <created>1674000195353</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1674000195353</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

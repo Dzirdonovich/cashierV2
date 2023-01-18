@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import {Headers, Inject, Injectable} from '@nestjs/common';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
 import {
@@ -83,14 +83,15 @@ export class OrdersService {
     return order;
   }
 
-  async findAllWithPage(page: number) {
+  async findAllWithPage(page: number,) {
     return await Order.findAll({
       order: [['createdAt', 'DESC']],
       limit: 12,
       offset: 12 * page - 12,
     });
   }
-  async findAll() {
+  async findAll( ) {
+
     return await Order.findAll({
       order: [['createdAt', 'ASC']],
     });
