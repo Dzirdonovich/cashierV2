@@ -7,7 +7,14 @@ export const getOrdersWithPage: any = createAsyncThunk(
   "orders/getOrdersWithPage",
   async (offset: number) => {
     const { data } = await axios.get(
-        `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/orders/` + offset
+      `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/orders/` +
+        offset,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
 
     return data;
@@ -23,7 +30,15 @@ interface Order {
 }
 
 export const getOrders: any = createAsyncThunk("orders/getOrders", async () => {
-  const { data } = await axios.get(`${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/orders`);
+  const { data } = await axios.get(
+    `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/orders`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    }
+  );
   return data;
 });
 
@@ -31,14 +46,17 @@ export const postOrder: any = createAsyncThunk(
   "orders/postOrder",
   async (order) => {
     const { data } = await axios.post(
-        `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/orders`,
+      `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/orders`,
 
       order,
-        
-
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
 
     return data;
-
   }
 );

@@ -7,6 +7,7 @@ export const getMenu: any = createAsyncThunk("menus/getMenu", async () => {
     {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
     }
   );
