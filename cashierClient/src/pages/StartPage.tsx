@@ -9,7 +9,7 @@ import { IOrder } from "../models/IOrder";
 import { Link } from "react-router-dom";
 import { getWorkers } from "../store/asyncThynk/HTTPWorkers";
 import WorkerButton from "../components/WorkerButton";
-import {getMenu} from "../store/asyncThynk/HTTPMenu";
+import { getMenu } from "../store/asyncThynk/HTTPMenu";
 
 function StartPage() {
   const dispatch = useAppDispatch();
@@ -27,10 +27,12 @@ function StartPage() {
   };
 
   useEffect(() => {
-    dispatch(getOrdersWithPage(state.settings.page));
-    dispatch(getOrders());
-    dispatch(getWorkers());
-    dispatch(getMenu())
+    state.order.ordersWithPage.length = 0
+      ? dispatch(getOrdersWithPage(state.settings.page))
+      : "";
+    state.order.orders.length = 0 ? dispatch(getOrders()) : "";
+    state.worker.length = 0 ? dispatch(getWorkers()) : "";
+    state.menu.length = 0 ? dispatch(getMenu()) : "";
   }, [state.settings.page]);
 
   const calculateMediumPrice = (orders: IOrder[]) => {
