@@ -28,7 +28,6 @@ function StartPage() {
 
   useEffect(() => {
     dispatch(getOrdersWithPage(state.settings.page));
-    dispatch(getOrdersWithPage(1));
     dispatch(getOrders());
     dispatch(getWorkers());
     dispatch(getMenu())
