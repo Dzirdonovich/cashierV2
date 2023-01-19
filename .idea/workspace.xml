@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="little changes">
-      <change afterPath="$PROJECT_DIR$/cashierClient/src/utils/floorToNumber.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/components/CurrentOrder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/components/CurrentOrder.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/components/OrderItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/components/OrderItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/models/ICurrentOrder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/models/ICurrentOrder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/models/IOrder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/models/IOrder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/models/IOrderItemProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/models/IOrderItemProps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/models/ISettings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/models/ISettings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/pages/LastPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/pages/LastPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/pages/StartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPMenu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPOrders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPOrders.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPWorkers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/asyncThynk/HTTPWorkers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/reducers/settingsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/reducers/settingsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orderitem/dto/create-orderitem.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orderitem/dto/create-orderitem.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orderitem/entities/orderitem.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orderitem/entities/orderitem.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orderitem/orderitem.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orderitem/orderitem.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orders/dto/create-order.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orders/dto/create-order.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orders/entities/order.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orders/entities/order.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.providers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.providers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierServer/src/modules/orders/orders.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +124,7 @@
       <workItem from="1673998494211" duration="5665000" />
       <workItem from="1674004311751" duration="342000" />
       <workItem from="1674035379505" duration="5356000" />
-      <workItem from="1674146327138" duration="7825000" />
+      <workItem from="1674146327138" duration="7927000" />
     </task>
     <task id="LOCAL-00001" summary="1v">
       <created>1668536262752</created>
@@ -456,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674078367932</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="little changes">
+      <created>1674156681197</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1674156681197</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

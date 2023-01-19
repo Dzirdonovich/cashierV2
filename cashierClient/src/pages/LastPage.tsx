@@ -1,7 +1,7 @@
 import CurrentOrder from "../components/CurrentOrder";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import WorkerButton from "../components/WorkerButton";
-import { BsFillPeopleFill, BsFillTelephoneFill } from "react-icons/all";
+import { BsFillPeopleFill, BsFillTelephoneFill } from "react-icons/bs/index";
 import {
   setInputLastPage,
   setNameLastPage,
