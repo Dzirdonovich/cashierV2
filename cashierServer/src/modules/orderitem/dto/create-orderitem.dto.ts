@@ -8,4 +8,5 @@ export class CreateOrderitemDto {
   readonly price: number;
   ingredients: CreateIngredientDto[];
   readonly orderId: number;
+  readonly count: number;
 }

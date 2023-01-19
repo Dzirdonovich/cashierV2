@@ -6,12 +6,10 @@ import {
   setStateOrder,
 } from "../store/reducers/settingsReducer";
 import { DECREMENT, INCREMENT } from "../consts";
-import { log } from "util";
 import {
   addItemToOrder,
   changeCountOrder,
 } from "../store/reducers/currentOrderReducer";
-import { postOrder } from "../store/asyncThynk/HTTPOrders";
 import { useNavigate } from "react-router-dom";
 
 interface ICurrentOrderProps {
@@ -77,7 +75,7 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
           <div className="h-1/5">
             <div className="text-4xl font-bold">{fullprice} Р</div>
             <div className="flex w-full justify-between mt-2 rounded-md overflow-hidden ">
-              {settings.placeOrder ? (
+              {settings.placeOrder === 0 ? (
                 <div
                   onClick={() => dispatch(setPlaceOrder(INCREMENT))}
                   className="bg-blue-500 px-4 py-2 text-center w-1/2"
@@ -92,7 +90,7 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
                   В зале
                 </div>
               )}
-              {!settings.placeOrder ? (
+              {settings.placeOrder === 1 ? (
                 <div
                   onClick={() => dispatch(setPlaceOrder(DECREMENT))}
                   className="bg-blue-500 px-4 py-2 text-center w-1/2 cursor-pointer"
@@ -115,7 +113,7 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
                 <div className="">
                   <div>{order.name}</div>
                   <div>{order.price} Р</div>
-                  <div>{order.size } </div>
+                  <div>{order.size} </div>
                 </div>
                 <div className="flex justify-between items-center w-1/3 ml-4 bg-gray-400 px-4 rounded-xl text-xl">
                   {order.count === 0 ? (

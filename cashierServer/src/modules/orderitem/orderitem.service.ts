@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateOrderitemDto } from './dto/create-orderitem.dto';
 import { UpdateOrderitemDto } from './dto/update-orderitem.dto';
 import { Orderitem } from './entities/orderitem.entity';
+import { Ingredient } from '../ingredients/entities/ingredient.entity';
 
 @Injectable()
 export class OrderitemService {
@@ -10,7 +11,9 @@ export class OrderitemService {
   }
 
   async findAll() {
-    return await Orderitem.findAll();
+    return await Orderitem.findAll({
+      include: Ingredient,
+    });
   }
 
   findOne(id: number) {

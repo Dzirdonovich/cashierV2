@@ -1,19 +1,18 @@
 import CurrentOrder from "../components/CurrentOrder";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import WorkerButton from "../components/WorkerButton";
-import { getWorkers } from "../store/asyncThynk/HTTPWorkers";
-import { BsFillPeopleFill, BsFillTelephoneFill } from "react-icons/bs/index";
+import { BsFillPeopleFill, BsFillTelephoneFill } from "react-icons/all";
 import {
   setInputLastPage,
   setNameLastPage,
   setPriceLastPage,
   setTelephoneLastPage,
 } from "../store/reducers/settingsReducer";
-import React, { useEffect, useRef, useState } from "react";
-import ReactDOM from "react-dom/client";
-import { getOrdersWithPage, postOrder } from "../store/asyncThynk/HTTPOrders";
+import React, { useEffect, useRef } from "react";
+import { postOrder } from "../store/asyncThynk/HTTPOrders";
 import { useNavigate } from "react-router-dom";
 import { clearCurrentOrder } from "../store/reducers/currentOrderReducer";
+import { floorToNumber } from "../utils/floorToNumber";
 
 const LastPage = () => {
   const dispatch = useAppDispatch();
@@ -49,8 +48,9 @@ const LastPage = () => {
         ? settings.lastPage.telephone
         : settings.lastPage.input === 1
         ? settings.lastPage.name
-        : settings.lastPage.price;
-    const newValue = pastValue + number;
+        : settings.lastPage.money;
+    const newValue =
+      number === "<" ? pastValue.slice(0, -1) : pastValue + number;
     dispatch(
       settings.lastPage.input === 0
         ? setTelephoneLastPage(newValue)
@@ -62,7 +62,13 @@ const LastPage = () => {
 
   const onClickPay = () => {
     const newOrder = {
-      Order: { client: settings.lastPage.name, place: 0, payment: 0 },
+      Order: {
+        client: settings.lastPage.name,
+        place: settings.placeOrder,
+        payment: 0,
+        telephone: settings.lastPage.telephone,
+        money: Number(settings.lastPage.money),
+      },
       OrderItems: [...orders],
       workerId: settings.workerId,
     };
@@ -112,23 +118,46 @@ const LastPage = () => {
               />
             </div>
             <div className="w-full bg-white h-[45%] relative rounded-xl overflow-hidden ">
-              <BsFillPeopleFill className="absolute left-2 top-[22.5%] -translate-y-[20%] z-10" />
+              <BsFillPeopleFill className="absolute left-2 top-[18%] -translate-y-[20%] z-10" />
               <input
                 onClick={() => onClickPrice()}
-                value={settings.lastPage.price}
+                value={settings.lastPage.money}
                 type="text"
                 placeholder="Сумма у клиента"
-                className="w-full h-1/2 absolute absolute left-12 w-[90%] outline-0"
+                className="w-full h-[40%] absolute absolute left-12 w-[90%] outline-0"
               />
+              <div className="absolute top-[30%] left-2">
+                Сдача{" "}
+                {Number(settings.lastPage.money) > fullprice
+                  ? Number(settings.lastPage.money) - fullprice
+                  : ""}
+              </div>
               <div className="absolute bottom-2 left-2 right-2 flex justify-between h-1/2 z-10">
-                <button className="text-center w-[30%] bg-gray-400 rounded-xl ">
-                  1
+                <button
+                  onClick={() =>
+                    dispatch(
+                      setPriceLastPage(floorToNumber(fullprice, 10).toString())
+                    )
+                  }
+                  className="text-center w-[30%] bg-gray-400 rounded-xl "
+                >
+                  {floorToNumber(fullprice, 10)}
                 </button>
-                <button className="text-center w-[30%] bg-gray-400 rounded-xl ">
-                  12
+                <button
+                  onClick={() =>
+                    dispatch(
+                      setPriceLastPage(floorToNumber(fullprice, 50).toString())
+                    )
+                  }
+                  className="text-center w-[30%] bg-gray-400 rounded-xl "
+                >
+                  {floorToNumber(fullprice, 50)}
                 </button>
-                <button className="text-center w-[30%] bg-gray-400 rounded-xl ">
-                  1
+                <button
+                  onClick={() => dispatch(setPriceLastPage(fullprice))}
+                  className="text-center w-[30%] bg-gray-400 rounded-xl "
+                >
+                  Ровно
                 </button>
               </div>
             </div>

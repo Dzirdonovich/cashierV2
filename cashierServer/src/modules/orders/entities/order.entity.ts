@@ -3,10 +3,8 @@ import {
   DataType,
   Table,
   Model,
-  HasOne,
   ForeignKey,
   BelongsTo,
-  BelongsToMany,
   HasMany,
 } from 'sequelize-typescript';
 import {
@@ -16,7 +14,6 @@ import {
 } from '../../../core/constants';
 import { Worker } from '../../workers/entities/worker.entity';
 import { Orderitem } from '../../orderitem/entities/orderitem.entity';
-import { CreateOrderDto } from '../dto/create-order.dto';
 
 @Table
 export class Order extends Model<Order> {
@@ -33,10 +30,14 @@ export class Order extends Model<Order> {
   status: number;
   @HasMany(() => Orderitem)
   OrderItemRel: Orderitem[];
-  @Column(DataType.JSON)
-  OrderItem: CreateOrderDto[];
+
   @Column({ type: DataType.INTEGER })
   payment: number;
+  @Column({ type: DataType.STRING })
+  telephone: string;
+  @Column({ type: DataType.INTEGER })
+  money: number;
+
   @Column({ type: DataType.INTEGER })
   number: number;
 

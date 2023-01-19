@@ -1,6 +1,5 @@
-import { IMenu } from "./IMenu";
 import { IIngredient } from "./IIngredient";
-interface Order {
+export interface Order {
   name: string;
   ingredients: IIngredient[];
   category: string;

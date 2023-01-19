@@ -4,7 +4,7 @@ export interface ISettings {
   page: number;
   currentPage: PageEnum;
   stateOrder: number;
-  placeOrder: boolean;
+  placeOrder: number;
   sizeOrder: number;
   workerId: number;
   workerModal: boolean;
@@ -12,6 +12,6 @@ export interface ISettings {
     input: number;
     telephone: string;
     name: string;
-    price: string;
+    money: string;
   };
 }

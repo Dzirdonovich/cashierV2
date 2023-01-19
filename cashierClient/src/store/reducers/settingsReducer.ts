@@ -7,7 +7,7 @@ const initialState: ISettings = {
   page: 1,
   currentPage: PageEnum.action,
   stateOrder: 0,
-  placeOrder: true,
+  placeOrder: 0,
   sizeOrder: 0,
   workerId: 1,
   workerModal: false,
@@ -15,7 +15,7 @@ const initialState: ISettings = {
     input: 0,
     telephone: "",
     name: "",
-    price: "",
+    money: "",
   },
 };
 
@@ -33,9 +33,7 @@ export const SettingSlice = createSlice({
       state.stateOrder = payload;
     },
     setPlaceOrder(state, { payload }) {
-      payload === INCREMENT
-        ? (state.placeOrder = true)
-        : (state.placeOrder = false);
+      payload === INCREMENT ? (state.placeOrder = 0) : (state.placeOrder = 1);
     },
     setSizeOrder(state, { payload }) {
       state.sizeOrder = payload;
@@ -56,7 +54,7 @@ export const SettingSlice = createSlice({
       state.lastPage.name = payload;
     },
     setPriceLastPage(state, { payload }) {
-      state.lastPage.price = payload;
+      state.lastPage.money = payload;
     },
   },
 });

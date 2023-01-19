@@ -2,7 +2,6 @@ import OrderItem from "../components/OrderItem";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import { useEffect } from "react";
 import { getOrders, getOrdersWithPage } from "../store/asyncThynk/HTTPOrders";
-import { useDispatch } from "react-redux";
 import { DECREMENT, INCREMENT } from "../consts";
 import { setPage } from "../store/reducers/settingsReducer";
 import { IOrder } from "../models/IOrder";
@@ -55,7 +54,7 @@ function StartPage() {
             <div>
               <span className="uppercase text-xs">Средний чек</span>
               <div className="text-right">
-                {calculateMediumPrice(state.order.orders)} Р
+                {Math.floor(calculateMediumPrice(state.order.orders))} Р
               </div>
             </div>
             <div>
@@ -74,7 +73,10 @@ function StartPage() {
               createdAt={new Date(orderItem.createdAt)}
               status={orderItem.status}
               price={orderItem.price}
-              orderItem={orderItem.OrderItem}
+              OrderItemRel={orderItem.OrderItemRel}
+              worker={orderItem.worker}
+              telephone={orderItem.telephone}
+              money={orderItem.money}
             />
           ))}
         </div>

@@ -1,4 +1,4 @@
-import {Headers, Inject, Injectable} from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
 import {
@@ -11,7 +11,6 @@ import { Worker } from '../workers/entities/worker.entity';
 import { OrderitemService } from '../orderitem/orderitem.service';
 import { Orderitem } from '../orderitem/entities/orderitem.entity';
 import { Ingredient } from '../ingredients/entities/ingredient.entity';
-import { IngredientsService } from '../ingredients/ingredients.service';
 import { MenuItem } from '../menu-item/entities/menu-item.entity';
 
 @Injectable()
@@ -23,7 +22,6 @@ export class OrdersService {
     @Inject(MENUITEM_REPOSITORY)
     private readonly MenuItemRepository: typeof MenuItem,
     private readonly orderitemService: OrderitemService,
-    private readonly IngredientService: IngredientsService,
   ) {}
   async create(createOrderDto: CreateOrderDto) {
     let orderNumber = 0;
@@ -71,7 +69,6 @@ export class OrdersService {
             ),
           );
           item.push(createdOrderItem);
-          order.update({ OrderItem: item });
         });
       return { item, order };
     });
@@ -83,17 +80,18 @@ export class OrdersService {
     return order;
   }
 
-  async findAllWithPage(page: number,) {
+  async findAllWithPage(page: number) {
     return await Order.findAll({
       order: [['createdAt', 'DESC']],
       limit: 12,
       offset: 12 * page - 12,
+      include: [Orderitem, Worker],
     });
   }
-  async findAll( ) {
-
+  async findAll() {
     return await Order.findAll({
       order: [['createdAt', 'ASC']],
+      include: [Orderitem, Worker],
     });
   }
 

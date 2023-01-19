@@ -1,5 +1,3 @@
-import { OrderitemCategoryEnum } from '../../orderitem/enums/orderitem.category.enum';
-import { CreateIngredientDto } from '../../ingredients/dto/create-ingredient.dto';
 import { CreateOrderitemDto } from '../../orderitem/dto/create-orderitem.dto';
 
 export class CreateOrderDto {
@@ -7,6 +5,8 @@ export class CreateOrderDto {
     readonly client: string;
     readonly place: number;
     readonly payment: number;
+    readonly telephone: string;
+    readonly money: number;
   };
   readonly OrderItems: CreateOrderitemDto[];
 

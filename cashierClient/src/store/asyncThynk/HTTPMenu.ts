@@ -3,7 +3,9 @@ import axios from "axios";
 
 export const getMenu: any = createAsyncThunk("menus/getMenu", async () => {
   const { data } = await axios.get(
-    `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/menu-item`,
+    `${
+      process.env.REACT_APP_PRODUCTION_HOST || "http://localhost:4000"
+    }/api/v1/menu-item`,
     {
       headers: {
         "Content-Type": "application/json",

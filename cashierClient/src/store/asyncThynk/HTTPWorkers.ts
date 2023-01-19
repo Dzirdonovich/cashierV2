@@ -5,7 +5,9 @@ export const getWorkers: any = createAsyncThunk(
   "workers/getWorkers",
   async () => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_PRODUCTION_HOST || "localhost"}/api/v1/workers`,
+      `${
+        process.env.REACT_APP_PRODUCTION_HOST || "http://localhost:4000"
+      }/api/v1/workers`,
       {
         headers: {
           "Content-Type": "application/json",

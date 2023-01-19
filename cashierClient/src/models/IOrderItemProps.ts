@@ -1,3 +1,6 @@
+import { Order } from "./ICurrentOrder";
+import { IWorker } from "./IWorker";
+
 export interface IOrderItemProps {
   client: string;
   number: number;
@@ -5,5 +8,8 @@ export interface IOrderItemProps {
   createdAt: Date;
   status: string;
   price: number;
-  orderItem: [];
+  OrderItemRel: Order[];
+  worker: IWorker;
+  telephone: string;
+  money: number;
 }
