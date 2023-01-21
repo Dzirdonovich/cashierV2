@@ -8,10 +8,12 @@ export interface ISettings {
   sizeOrder: number;
   workerId: number;
   workerModal: boolean;
+
   lastPage: {
     input: number;
     telephone: string;
     name: string;
     money: string;
+    keyBoard: boolean;
   };
 }

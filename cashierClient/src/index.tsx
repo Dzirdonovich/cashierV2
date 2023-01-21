@@ -16,7 +16,6 @@ root.render(
     <BrowserRouter>
       <App />
       <CurrentCashier />
-      {/*<Keyboard />*/}
     </BrowserRouter>
   </Provider>
 );

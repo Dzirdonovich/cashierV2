@@ -16,6 +16,7 @@ const initialState: ISettings = {
     telephone: "",
     name: "",
     money: "",
+    keyBoard: false,
   },
 };
 
@@ -56,6 +57,9 @@ export const SettingSlice = createSlice({
     setPriceLastPage(state, { payload }) {
       state.lastPage.money = payload;
     },
+    setKeyBoard(state) {
+      state.lastPage.keyBoard = !state.lastPage.keyBoard;
+    },
     clearSettings(state) {
       state.stateOrder = initialState.stateOrder;
       state.currentPage = initialState.currentPage;
@@ -76,5 +80,6 @@ export const {
   setNameLastPage,
   setPriceLastPage,
   clearSettings,
+  setKeyBoard,
 } = SettingSlice.actions;
 export default SettingSlice.reducer;

@@ -4,6 +4,7 @@ import WorkerButton from "../components/WorkerButton";
 import { BsFillPeopleFill, BsFillTelephoneFill } from "react-icons/bs/index";
 import {
   setInputLastPage,
+  setKeyBoard,
   setNameLastPage,
   setPriceLastPage,
   setTelephoneLastPage,
@@ -13,6 +14,7 @@ import { postOrder } from "../store/asyncThynk/HTTPOrders";
 import { useNavigate } from "react-router-dom";
 import { clearCurrentOrder } from "../store/reducers/currentOrderReducer";
 import { floorToNumber } from "../utils/floorToNumber";
+import Keyboard from "../components/Keyboard";
 
 const LastPage = () => {
   const dispatch = useAppDispatch();
@@ -34,6 +36,7 @@ const LastPage = () => {
   };
   const onClickName = () => {
     dispatch(setInputLastPage(1));
+    dispatch(setKeyBoard());
   };
   const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setNameLastPage(e.target.value));
@@ -81,7 +84,8 @@ const LastPage = () => {
   };
 
   return (
-    <div className="flex justify-between h-full">
+    <div className="flex justify-between h-full relative">
+      {settings.lastPage.keyBoard ? <Keyboard /> : ""}
       <div className="w-[7%] bg-black"></div>
       <div className="w-[73%] bg-gray-400 px-8 font-semibold text-2xl">
         <div className="w-full flex justify-between items-center py-2  h-[18%]">
