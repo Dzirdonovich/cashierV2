@@ -4,10 +4,7 @@
     <list default="true" id="0e516b18-5153-410f-a6c5-9812d51eeb96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cashierClient/src/components/Keyboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/components/Keyboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/models/ISettings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/models/ISettings.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cashierClient/src/pages/LastPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/pages/LastPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cashierClient/src/store/reducers/settingsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cashierClient/src/store/reducers/settingsReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +129,7 @@
       <workItem from="1674004311751" duration="342000" />
       <workItem from="1674035379505" duration="5356000" />
       <workItem from="1674146327138" duration="8564000" />
-      <workItem from="1674327095880" duration="6003000" />
+      <workItem from="1674327095880" duration="6561000" />
     </task>
     <task id="LOCAL-00001" summary="1v">
       <created>1668536262752</created>
@@ -463,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674331531035</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="little changes">
+      <created>1674334522229</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1674334522229</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

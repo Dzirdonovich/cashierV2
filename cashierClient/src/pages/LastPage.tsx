@@ -38,9 +38,7 @@ const LastPage = () => {
     dispatch(setInputLastPage(1));
     dispatch(setKeyBoard());
   };
-  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setNameLastPage(e.target.value));
-  };
+
   const onClickPrice = () => {
     dispatch(setInputLastPage(2));
   };
@@ -114,7 +112,6 @@ const LastPage = () => {
               <BsFillPeopleFill className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
               <input
                 onClick={() => onClickName()}
-                onChange={(e) => onChangeName(e)}
                 value={settings.lastPage.name}
                 type="text"
                 placeholder="Имя клиента"

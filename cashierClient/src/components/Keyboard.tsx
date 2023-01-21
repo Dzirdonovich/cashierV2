@@ -1,9 +1,17 @@
-import { useAppDispatch } from "../hooks/redux";
-import { setKeyBoard } from "../store/reducers/settingsReducer";
+import { useAppDispatch, useAppSelector } from "../hooks/redux";
+import {
+  setKeyBoard,
+  setNameLastPage,
+} from "../store/reducers/settingsReducer";
+import React from "react";
 
 const Keyboard = () => {
   const keys = Array.from("йцукенгшщзхъфывапролджэячсмитьбю.");
   const dispatch = useAppDispatch();
+  const settings = useAppSelector((state) => state.settings);
+  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(setNameLastPage(e.target.value));
+  };
   return (
     <div className="absolute top-[15%] left-[10%] right-[10%] bottom-[15%] bg-white rounded-3xl shadow-2xl px-8 py-4 z-20">
       <button
@@ -13,7 +21,13 @@ const Keyboard = () => {
         x
       </button>
       <div className="w-full h-1/4 flex justify-center items-center">
-        <input type="text" className="w-[90%] h-full bg-blue-100 " />
+        <input
+          type="text"
+          className="w-[90%] h-full bg-blue-100 "
+          placeholder="Имя клиента"
+          value={settings.lastPage.name}
+          onChange={(event) => onChangeName(event)}
+        />
       </div>
       <div className="h-3/4 flex flex-wrap justify-center">
         {keys.map((key) => (
