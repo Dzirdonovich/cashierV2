@@ -42,9 +42,10 @@ export const CurrentOrderSlice = createSlice({
       } else {
         state.Orders.push({ ...payload, count: 1 });
       }
+      state.Current = initialState.Current;
     },
     clearCurrentOrder(state) {
-      state.Orders.length = 0;
+      state.Orders = initialState.Orders;
       state.Current = initialState.Current;
     },
     changeCountOrder(state, { payload }) {

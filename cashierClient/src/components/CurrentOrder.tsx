@@ -1,6 +1,7 @@
 import { IMenu } from "../models/IMenu";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import {
+  clearSettings,
   setPlaceOrder,
   setSizeOrder,
   setStateOrder,
@@ -9,8 +10,10 @@ import { DECREMENT, INCREMENT } from "../consts";
 import {
   addItemToOrder,
   changeCountOrder,
+  clearCurrentOrder,
 } from "../store/reducers/currentOrderReducer";
 import { useNavigate } from "react-router-dom";
+import CloseButton from "./CloseButton";
 
 interface ICurrentOrderProps {
   currentOrder: IMenu;
@@ -24,6 +27,11 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
   const menu = useAppSelector((state) => state.menu);
 
   const dispatch = useAppDispatch();
+  const onClickCloseButton = () => {
+    dispatch(clearCurrentOrder());
+    dispatch(clearSettings());
+    navigate("/");
+  };
   const sizes = [25, 30, 35];
   let fullprice = 0;
   orders.forEach((x) => (fullprice += x.price));
@@ -52,14 +60,13 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
   };
 
   const clickLastState = () => {
-    console.log(currentOrders);
     navigate("/last");
     dispatch(setStateOrder(2));
   };
 
   const backToChoice = () => {
     console.log(currentOrder);
-    dispatch(setStateOrder(1));
+    dispatch(setStateOrder(0));
     navigate("/order");
   };
 
@@ -73,7 +80,13 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
       {settings.stateOrder === 0 ? (
         <div className="flex flex-col justify-between h-full">
           <div className="h-1/5">
-            <div className="text-4xl font-bold">{fullprice} Р</div>
+            <div className="flex justify-between">
+              <div className="text-4xl font-bold">{fullprice} Р</div>
+              <CloseButton
+                twClasses="bg-red-500 rounded-3xl py-2 px-4 text-white text-xl flex justify-center items-center "
+                onClick={() => onClickCloseButton()}
+              />
+            </div>
             <div className="flex w-full justify-between mt-2 rounded-md overflow-hidden ">
               {settings.placeOrder === 0 ? (
                 <div
@@ -238,9 +251,15 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
         <div className="flex flex-col justify-between h-full">
           <div>
             <div className="h-1/5">
-              <div className="text-4xl font-bold">{fullprice} Р</div>
+              <div className="flex justify-between">
+                <div className="text-4xl font-bold">{fullprice} Р</div>
+                <CloseButton
+                  twClasses="bg-red-500 rounded-3xl py-2 px-4 text-white text-xl flex justify-center items-center "
+                  onClick={() => onClickCloseButton()}
+                />
+              </div>
               <div className="flex w-full justify-between mt-2 rounded-md overflow-hidden ">
-                {settings.placeOrder ? (
+                {settings.placeOrder === 0 ? (
                   <div
                     onClick={() => dispatch(setPlaceOrder(INCREMENT))}
                     className="bg-blue-500 px-4 py-2 text-center w-1/2"
@@ -255,7 +274,7 @@ const CurrentOrder = ({ currentOrder, orders }: ICurrentOrderProps) => {
                     В зале
                   </div>
                 )}
-                {!settings.placeOrder ? (
+                {settings.placeOrder === 1 ? (
                   <div
                     onClick={() => dispatch(setPlaceOrder(DECREMENT))}
                     className="bg-blue-500 px-4 py-2 text-center w-1/2 cursor-pointer"

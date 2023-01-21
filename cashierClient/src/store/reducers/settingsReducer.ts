@@ -56,6 +56,10 @@ export const SettingSlice = createSlice({
     setPriceLastPage(state, { payload }) {
       state.lastPage.money = payload;
     },
+    clearSettings(state) {
+      state.stateOrder = initialState.stateOrder;
+      state.currentPage = initialState.currentPage;
+    },
   },
 });
 
@@ -71,5 +75,6 @@ export const {
   setTelephoneLastPage,
   setNameLastPage,
   setPriceLastPage,
+  clearSettings,
 } = SettingSlice.actions;
 export default SettingSlice.reducer;
