@@ -18,6 +18,9 @@ const initialState: ISettings = {
     money: "",
     keyBoard: false,
   },
+  keyBoard: {
+    upperCase: true,
+  },
 };
 
 export const SettingSlice = createSlice({
@@ -64,6 +67,9 @@ export const SettingSlice = createSlice({
       state.stateOrder = initialState.stateOrder;
       state.currentPage = initialState.currentPage;
     },
+    setUpperCase(state, { payload }) {
+      state.keyBoard.upperCase = payload;
+    },
   },
 });
 
@@ -81,5 +87,6 @@ export const {
   setPriceLastPage,
   clearSettings,
   setKeyBoard,
+  setUpperCase,
 } = SettingSlice.actions;
 export default SettingSlice.reducer;

@@ -16,4 +16,7 @@ export interface ISettings {
     money: string;
     keyBoard: boolean;
   };
+  keyBoard: {
+    upperCase: boolean;
+  };
 }
