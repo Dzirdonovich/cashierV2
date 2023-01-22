@@ -31,6 +31,11 @@ const Keyboard = () => {
     }
   };
 
+  const onClickReady = () => {
+    dispatch(setUpperCase(true));
+    dispatch(setKeyBoard());
+  };
+
   return (
     <div className="absolute top-0 left-[10%] right-[10%] bottom-0 bg-white rounded-3xl shadow-2xl px-8 py-4 z-20 flex flex-col justify-between ">
       <button
@@ -92,7 +97,7 @@ const Keyboard = () => {
           })}
         </div>
         <button
-          onClick={() => dispatch(setKeyBoard())}
+          onClick={() => onClickReady()}
           className="absolute right-2 text-white bg-blue-500 px-32 py-4 rounded-2xl"
         >
           Готово
