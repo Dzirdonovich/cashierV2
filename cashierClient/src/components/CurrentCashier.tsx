@@ -18,8 +18,8 @@ const CurrentCashier = () => {
     dispatch(setWorkerModal());
   };
   let showComponent = settings.workerModal
-    ? "opacity-80 absolute top-20 left-40 right-40 bottom-10 bg-black px-8 pb-4 pt-20 rounded-3xl shadow-2xl"
-    : "hidden absolute top-20 left-40 right-40 bottom-10 bg-black px-8 pb-4 pt-20 rounded-3xl shadow-2xl";
+    ? "opacity-80 absolute top-20 left-40 right-40 bottom-10 bg-black px-8 pb-4 pt-20 rounded-3xl shadow-2xl z-10"
+    : "hidden absolute top-20 left-40 right-40 bottom-10 bg-black px-8 pb-4 pt-20 rounded-3xl shadow-2xl z-10";
 
   return (
     <div className={showComponent}>

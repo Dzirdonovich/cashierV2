@@ -47,8 +47,8 @@ const Keyboard = () => {
           value={settings.lastPage.name}
         />
       </div>
-      <div className="h-1/2 relative">
-        <div className="h-[75%] flex flex-wrap justify-center">
+      <div className="h-1/2 relative ">
+        <div className="h-[75%] flex flex-wrap justify-between">
           {keys.map((key, index) => {
             let classes = "";
             let p = 15;
